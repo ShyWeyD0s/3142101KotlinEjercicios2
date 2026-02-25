@@ -42,6 +42,8 @@ class EjerciciosKotlin {
             println("Es lunes! El precio de la entrada se reduce a la mitad")
             price /= 2
             println("su entrada cuesta $price usd")
+        } else {
+            println("No es lunes, el precio de la entrada se mantiene en $price usd")
         }
     }
 
@@ -74,6 +76,12 @@ class EjerciciosKotlin {
     }
 
     // Ejercicio 4
+    // Catalogo de canciones
+    // se hizo en la clase CatalogoCanciones.kt
+
+    // Ejercicio 5
+    // Mostrar datos de perfil red social
+    // se hizo en la clase PerfilRedSocial.kt
 
 
 }
@@ -88,6 +96,7 @@ class EjerciciosKotlin {
 // corremos el ejercicio en el main
 fun main(args: Array<String>) {
     // creamos una instancia de la clase EjerciciosKotlin y llamamos a la funcion notificacion para ejecutar el ejercicio
+    println("Ejercicio 1: Notificaciones")
     val ejercicios = EjerciciosKotlin()
     ejercicios.notificacion()
     // variables int para el ejercicio 2
@@ -140,6 +149,23 @@ fun main(args: Array<String>) {
     println("Información de la canción 4:")
     cancion4.mostrarCancion()
     println("Popularidad: ${cancion4.calcularPopularidad()}\n")
+
+    // ejercicio 5: mostrar datos de perfil red social
+    println("Ejercicio 5: Perfil Red Social")
+    // creamos una instancia de la clase  perfil red social con datos de ejemplo
+    val referido1 = PerfilRedsocial.Person("Carlos López", 35)
+    val perfil1 = PerfilRedsocial("Juan Pérez", 30, "Fotografía", referido1)
+    // mostramos la información del perfil utilizando la función showProfile de la clase PerfilRedsocial
+    perfil1.showProfile()
+    // otra instancia de perfil red social sin hobby, pero referido por otro perfil
+    val perfil2 = PerfilRedsocial("María Gómez", 25, null, referido1)
+    perfil2.showProfile()
+    // otra instancia de perfil red social sin hobby ni referido
+    val perfil3 = PerfilRedsocial("Ana Torres", 40, null, null)
+    perfil3.showProfile()
+
+
+
 
 
 }

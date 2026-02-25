@@ -16,6 +16,7 @@ class CatalogoCanciones(
     }
 
     fun mostrarCancion() {
+        println("---------------------")
         println("Título: $titulo")
         println("Artista: $artista")
         println("Año: $ano")
@@ -23,4 +24,3 @@ class CatalogoCanciones(
         println("Reproducciones: $reproducciones")
     }
 }
-
