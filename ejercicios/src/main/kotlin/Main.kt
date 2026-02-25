@@ -2,11 +2,9 @@ class EjerciciosKotlin {
 
     // Ejercicio 1: Notificaciones
     //creamos la funcion para ingresar datos de notf
-
     fun notificacion() {
         val notificacionMañana = 51
         val notificacionTarde = 135
-
         //imprimimos el resultado de la funcion printNotificatioSumary con los datos ingresados
         printNotificatioSumary(notificacionMañana, notificacionTarde)
     }
@@ -16,7 +14,6 @@ class EjerciciosKotlin {
         val notificacionesTotal = notificacionTarde + notificacionManana
         println("Tienes $notificacionesTotal notificaciones, $notificacionTarde por la tarde y $notificacionManana por la mañana")
     }
-
 
     // Ejercicio 2
     // Precio entradas de cine
@@ -47,7 +44,6 @@ class EjerciciosKotlin {
             println("su entrada cuesta $price usd")
         }
     }
-
 
     // Ejercicio 3
     // conversor de temperaturas F, K, C
@@ -105,7 +101,7 @@ fun main(args: Array<String>) {
     // llamamos a la funcion ticketPrice para ejecutar el ejercicio 2 con los datos ingresados
     // recordar ingresar si es niño, adulto o adulto mayor para ver el precio de la entrada
     ejercicios.ticketPrice(adult, isMonday)
-    // variables para el ejercicio 3
+    // Ejercicio 3: conversor de temperaturas
     println("\nEjercicio 3: Conversor de Temperaturas")
     print("Ingrese la temperatura a convertir: ")
     val temp = readln().toDouble()
@@ -121,4 +117,29 @@ fun main(args: Array<String>) {
     val opcion = readln().toInt()
     // llamamos a la funcion convertTemperature para ejecutar el ejercicio 3 con los datos ingresados
     ejercicios.convertTemperature(temp, opcion)
+    // Ejercicio 4: Catálogo de canciones
+    // creamos tres instancias de la clase CatalogoCanciones con diferentes datos para cada canción
+    val cancion1 = CatalogoCanciones("Bohemian Rhapsody", "Queen", 1975, 354, 1000000)
+    val cancion2 = CatalogoCanciones("Imagine", "John Lennon", 1971, 183, 500000)
+    val cancion3 = CatalogoCanciones("Smells Like Teen Spirit", "Nirvana", 1991, 301, 750000)
+    val cancion4 = CatalogoCanciones("Mami te quiero", "El chapas", 2026, 233, 20)
+   // mostramos la información de cada canción y calculamos su popularidad utilizando las funciones de la clase CatalogoCanciones
+    println("Información de la canción 1:")
+    cancion1.mostrarCancion() // este metodo nos mostrara la informacion de la cancion1
+    println("Popularidad: ${cancion1.calcularPopularidad()}\n") // aqui imprimimos el calculo de popularidad de la cancion1
+
+
+    println("Información de la canción 2:")
+    cancion2.mostrarCancion()
+    println("Popularidad: ${cancion2.calcularPopularidad()}\n")
+
+    println("Información de la canción 3:")
+    cancion3.mostrarCancion()
+    println("Popularidad: ${cancion3.calcularPopularidad()}\n")
+
+    println("Información de la canción 4:")
+    cancion4.mostrarCancion()
+    println("Popularidad: ${cancion4.calcularPopularidad()}\n")
+
+
 }
