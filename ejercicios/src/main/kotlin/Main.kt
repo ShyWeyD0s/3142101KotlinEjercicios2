@@ -163,6 +163,22 @@ fun main(args: Array<String>) {
     // otra instancia de perfil red social sin hobby ni referido
     val perfil3 = PerfilRedsocial("Ana Torres", 40, null, null)
     perfil3.showProfile()
+    // Ejercicio 6: Celular plegable
+        println("\nEjercicio 6: Celular Plegable")
+        // instancia para un celular plegable
+        println("Celular plegable:")
+        val foldablePhone = FoldableCellphone()
+        foldablePhone.checkPhoneScreenLight() // Verificar estado inicial
+        foldablePhone.fold() // Doblar el teléfono
+        foldablePhone.checkPhoneScreenLight() // Verificar estado después de doblar
+        foldablePhone.unfold() // Desdoblar el teléfono
+        foldablePhone.checkPhoneScreenLight() // Verificar estado después de desdoblar
+        // instancia para un celular normal
+        println("\nCelular normal:")
+        val regularPhone = Cellphone()
+        regularPhone.checkPhoneScreenLight() // Verificar estado inicial
+        regularPhone.switchEncendida() // Encender el teléfono
+        regularPhone.checkPhoneScreenLight() // Verificar estado después de encender
 
 
 
