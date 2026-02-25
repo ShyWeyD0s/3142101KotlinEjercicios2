@@ -180,6 +180,16 @@ fun main(args: Array<String>) {
         regularPhone.switchEncendida() // Encender el teléfono
         regularPhone.checkPhoneScreenLight() // Verificar estado después de encender
 
+        //Ejercicio 7: Subasta
+
+        println("\nEjercicio 7: Subasta")
+        // Creamos algunas ofertas de ejemplo
+        val bid1 = Bid(50, "Tania")
+        val bid2 = Bid(10, "Camilo")
+        // ahora probamos la función auctionPrice con diferentes escenarios
+        println("Oferta de Tania: ${auctionPrice(bid1, 40)} USD") // Debería devolver 50 (oferta válida)
+        println("Oferta de Camilo: ${auctionPrice(bid2, 40)} USD") // Debería devolver 40 (oferta menor al mínimo), se rechaza la oferta
+//
 
 
 
