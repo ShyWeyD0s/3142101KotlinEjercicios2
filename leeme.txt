@@ -1,0 +1,1 @@
+Abrir con el IDE IJ, ya que poseen herencia y se manejan clases
